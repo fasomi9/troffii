@@ -19,7 +19,7 @@ __version__ = (1, 1, 1)
 
 from .. import loader, utils
 from telethon.tl.types import Message
-import logger
+import logging
 @loader.tds
 class snosMod(loader.Module):
     """snos channels"""

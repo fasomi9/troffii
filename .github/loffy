@@ -28,6 +28,7 @@ class snosMod(loader.Module):
     async def clearcmd(self, message: Message):
 
     chat_id = message.chat.id
+
     messages = get_chat_history(chat_id)
 
     for m in messages:

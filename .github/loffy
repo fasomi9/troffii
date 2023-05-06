@@ -32,7 +32,6 @@ class snosMod(loader.Module):
 
             messages = get_chat_history(chat_id)
 
-            messages = client.get_messages(chat_history)
     for m in messages:
 
         try:

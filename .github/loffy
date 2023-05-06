@@ -18,10 +18,9 @@ __version__ = (1, 1, 1)
 # meta developer: @shyatzd
 
 from .. import loader, utils
-import asyncio
 from telethon.tl.types import Message
 @loader.tds
-class hosMod(loader.Module):
+class snosMod(loader.Module):
     """snos channels"""
 
     strings = {"name": "channel riper"}
@@ -37,5 +36,3 @@ class hosMod(loader.Module):
         except:
             pass
     reply_to(message, "Канал был очищен от сообщений.")
-    message = await utils.answer(message, i)
-            await asyncio.sleep(1)

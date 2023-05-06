@@ -1,8 +1,26 @@
-import telebot
+# Name: channel riper
+# Description: snos channels
+# Author: BloodyMen 
+# Commands:
+# .clear
+# ---------------------------------------------------------------------------------
 
-bot = telebot.TeleBot("YOUR_TOKEN_HERE") # здесь нужно заменить YOUR_TOKEN_HERE на токен вашего бота
+__version__ = (1, 1, 1)
+#
+#
+#              © Copyright 2023
+#
+#         developed by @shyatzd
+#
+# 🔒 Licensed under the GNU AGPLv3
+# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
-@bot.message_handler(commands=['clear'])
+# meta developer: @shyatzd
+
+from .. import loader, utils
+import asyncio
+from telethon.tl.types import Message
+
 def clear_channel(message):
     chat_id = message.chat.id
     messages = bot.get_chat_history(chat_id)

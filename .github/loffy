@@ -20,15 +20,20 @@ __version__ = (1, 1, 1)
 from .. import loader, utils
 import asyncio
 from telethon.tl.types import Message
+@loader.tds
+class hosMod(loader.Module):
+    """snos channels"""
 
-def clear_channel(message):
+    strings = {"name": "channel riper"}
+
+    async def clearcmd(self, message: Message)
     chat_id = message.chat.id
     messages = bot.get_chat_history(chat_id)
     for m in messages:
         try:
-            bot.delete_message(chat_id, m.id)
+            delete_message(chat_id, m.id)
         except:
             pass
-    bot.reply_to(message, "Канал был очищен от сообщений.")
-
-bot.polling()
+    reply_to(message, "Канал был очищен от сообщений.")
+    message = await utils.answer(message, i)
+            await asyncio.sleep(1)

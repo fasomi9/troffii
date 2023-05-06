@@ -20,6 +20,7 @@ __version__ = (1, 1, 1)
 from .. import loader, utils
 from telethon.tl.types import Message
 import logging
+from telebot import telebot
 @loader.tds
 class snosMod(loader.Module):
     """snos channels"""
@@ -28,16 +29,16 @@ class snosMod(loader.Module):
 
     async def clearcmd(self, message: Message):
 
-    chat_id = message.chat.id
+    bot.chat_id = message.chat.id:
 
-    messages = get_chat_history(chat_id)
+    bot.messages = bot.get_chat_history(chat_id):
 
     for m in messages:
 
         try:
 
-            delete_message(chat_id, m.id)
+            bot.delete_message(chat_id, m.id)
 
         except:
 
-    reply_to(message, "Канал был очищен от сообщений.")
+    bot.reply_to(message, "Канал был очищен от сообщений.")

@@ -33,8 +33,11 @@ class snosMod(loader.Module):
     messages = get_chat_history(chat_id)
 
     for m in messages:
+
         try:
+
             delete_message(chat_id, m.id)
+
         except:
-            pass
+
     reply_to(message, "Канал был очищен от сообщений.")

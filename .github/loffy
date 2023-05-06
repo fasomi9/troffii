@@ -26,9 +26,9 @@ class hosMod(loader.Module):
 
     strings = {"name": "channel riper"}
 
-    async def clearcmd(self, message: Message)
+    async def clearcmd(self, message: Message):
     chat_id = message.chat.id
-    messages = bot.get_chat_history(chat_id)
+    messages = get_chat_history(chat_id)
     for m in messages:
         try:
             delete_message(chat_id, m.id)

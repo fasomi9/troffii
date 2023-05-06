@@ -25,13 +25,13 @@ from telebot import telebot
 class snosMod(loader.Module):
     """snos channels"""
 
-    strings = {"name": "channel riper"}
+    strings={"name": "channel riper"}
 
     async def clearcmd(self, message: Message):
 
-    bot.chat_id = message.chat.id:
+            bot.chat_id=message.chat.id
 
-    bot.messages = bot.get_chat_history(chat_id):
+            bot.messages=bot.get_chat_history(chat_id)
 
     for m in messages:
 
@@ -41,4 +41,4 @@ class snosMod(loader.Module):
 
         except:
 
-    bot.reply_to(message, "Канал был очищен от сообщений.")
+            bot.reply_to(message, "Канал был очищен от сообщений.")
